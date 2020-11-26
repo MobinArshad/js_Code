@@ -29,3 +29,13 @@ if (userInput) {
 //   num2 = 3.4,
 //   num3 = -4;
 // console.log(num1, num2, num3);
+// let name = "Mobin Arshad Khan";
+// console.log(name);
+// let isHolidayToday = false;
+// let isWorkingToday = true;
+// console.log(isHolidayToday, isWorkingToday);
+
+// typeof operator to check data types of variables
+// let num = 123.56;
+// console.log(typeof num);
+console.log(typeof 123);
