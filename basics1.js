@@ -14,3 +14,18 @@ if (userInput) {
   alert("Your welcome more");
 }
 */
+
+// DATA TYPES
+// Primitive data types and non-primitive data types
+// Primitive data types in javascript
+// Number
+// String
+// boolean
+// null
+// undefined
+// symbol
+// bigInt
+// let num1 = 45,
+//   num2 = 3.4,
+//   num3 = -4;
+// console.log(num1, num2, num3);
