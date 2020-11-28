@@ -62,3 +62,33 @@ function dogToHuman(ageOfDog) {
   return humanAge;
 }
 console.log(dogToHuman(6));
+// increment and decrement e.g i++ , i--
+// pre increment and pre decrement and post increment and post decrement
+
+let x;
+x = x + 1; // x++
+x = x - 1; // x--
+x += 1; // x= x + 1
+x -= 1; // x = x-1
+
+// let a = 5;
+// console.log(a++); // 5 post increment
+// console.log(++a); // 6
+// console.log(a--); // 5 post decrement
+// console.log(--a); // 4 pre increment
+
+// function :=> reusable bits of code that we can used again and again when we need function defined once used again and again
+
+// function expression , arrow function
+const sayName = (name) =>
+  `Your name is ${name} i like you on my code tutorials`;
+console.log(sayName("Mobin Arshad Khan"));
+// function declartion
+function greeting(name) {
+  let about =
+    "Welcome to my tutorials " +
+    name +
+    " wannaa learn to developed game engine like M2.AK";
+  return about;
+}
+console.log(greeting("Mobin Arshad Khan"));
