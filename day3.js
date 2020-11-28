@@ -42,10 +42,23 @@ let msg =
 let rMsg = msg.slice(0, 50) + ".... !";
 console.log(rMsg);
 // first letter of word is capitalized
+// split the word into two parts first letter and rest of worlds using slice method and then concatenate them
+
 function cap(str) {
   str = str.toLowerCase();
   let firstChar = str.slice(0, 1).toUpperCase();
   let cmStr = firstChar + str.slice(1, str.length);
   return cmStr;
 }
-console.log(cap("mantasha"));
+console.log(cap("mobin"));
+
+// data types Number
+// mathematical operator + , -, *, / , %, ++, --
+console.log(typeof 123);
+// convertor human age to dog age
+// formula humanAge = (dogAge-2) * 4 + 21;
+function dogToHuman(ageOfDog) {
+  let humanAge = (ageOfDog - 2) * 4 + 21;
+  return humanAge;
+}
+console.log(dogToHuman(6));
