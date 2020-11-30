@@ -50,3 +50,22 @@ function bmiCalculator(weight, height) {
 }
 
 console.log(bmiCalculator(65, 1.8));
+
+// calculating leap year challanges
+// leap year
+function leapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "leap year";
+      } else {
+        return "not leap year";
+      }
+    } else {
+      return "Leap Year";
+    }
+  } else {
+    return "Not Leap Year";
+  }
+}
+console.log(leapYear(3000));
