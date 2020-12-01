@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html DOM</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <!-- LIGHT ON OFF CODE -->
@@ -13,7 +20,37 @@
         <img src="./pic_bulboff.gif" alt="img" id="img"/>
         <button type="button" onclick="lightOFF()">Bulb Off</button>
     </div>
+    <!-- END OF LIGHT OFF -->
+    <br>
+    <hr />
+    <br>
+   <div class="box">
+
+   </div>
+   <br>
+  <button type="button" onclick="changeStyle()">Change Style</button>
+<br>
+<hr />
+<br>
+
+<!-- HIDE AND SHOW -->
+  <div>
+      <p id="show">This is showed by</p>
+      
+      <button type="button" onclick="hideShow()">Hide / show</button>
+  </div>
+
+
+   
   <script>
+     const  p = document.getElementById('show');
+     function hideShow(){
+         p.style.display = "none"; 
+     }
+    
+
+
+      //JS LIGHT-- >
       let bulb = document.getElementById('img');
       function lightON(){
           bulb.src = "./pic_bulbon.gif";
@@ -23,7 +60,13 @@
          bulb.src = "./pic_bulboff.gif";
      }
 
-
+   // CANGING STYLE WITH THE HELP OF JAVASCRIPT
+   let box = document.getElementsByClassName("box")[0];
+    function changeStyle(){
+        box.style.width = "200px";
+        box.style.height = "200px";
+        box.style.backgroundColor = "lime";
+    }
   </script> 
 
 
