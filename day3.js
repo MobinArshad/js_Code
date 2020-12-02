@@ -92,3 +92,23 @@ function greeting(name) {
   return about;
 }
 console.log(greeting("Mobin Arshad Khan"));
+
+// get milk function
+
+const getMilk = (bottels) => {
+  const cost = bottels * 55;
+  return `The cost of ${bottels} bottels Milk is ${cost}`;
+};
+console.log(getMilk(5));
+// BMI Calculator
+
+function calCulateBMI(w, h) {
+  let bmi = w / Math.pow(h, 2); //bmi = w/ h**2
+  return bmi;
+}
+console.log(calCulateBMI(65, 1.8));
+// Math.pow(2, 3) 2*2*2
+let z = Math.pow(2, 3);
+console.log(z);
+let y = 2 ** 3;
+console.log(y);
