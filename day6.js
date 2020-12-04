@@ -171,3 +171,6 @@ for (let i = 1; i <= 50; i++) {
     console.log(i);
   }
 }
+
+const date2 = new Date();
+console.log(date2);
