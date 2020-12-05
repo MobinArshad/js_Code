@@ -100,3 +100,19 @@ console.log(typeof stringNum);
 let num4 = 5;
 let num5 = 10;
 console.log(num4 != num5);
+// basics data structure in javaScript
+// array => one dimensional array and multi dimensional array
+const data = ["Mobin Arshad Khan", true, false, undefined, null, 34, 3e56];
+console.log(data);
+console.log(data.length);
+
+const about1 = [
+  ["mobin", 1, "true"],
+  {
+    name: "Mobin Arshad khan",
+    language: ["javaScript", "TypeScript", "Java", "Python"],
+  },
+];
+
+console.log(about1);
+console.log(about1.length);
