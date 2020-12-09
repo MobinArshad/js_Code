@@ -64,5 +64,45 @@ console.log(numbers.splice(-3));
 //Add Items Using splice()Passed
 
 // copying array item using slice(startIndex, endIndex)
+
 let fab = [0, 1, 1, 2, 3, 5, 8, 13];
 console.log(fab.slice(2, 7));
+
+// Practice DATA structure from freeCodeCamp
+// one dimensional array
+let simpleArray = ["one", 2, "three", true, false, undefined, null];
+console.log(simpleArray.length);
+// multi-dimensional array
+let complexArray = [
+  [
+    {
+      one: 1,
+      two: 2,
+    },
+    {
+      three: 3,
+      four: 4,
+    },
+  ],
+  [
+    {
+      a: "a",
+      b: "b",
+    },
+    {
+      c: "c",
+      d: "d",
+    },
+  ],
+];
+
+console.log(complexArray[0][0].one);
+
+// Access an Array's Contents Using Bracket Notation
+
+let ourArray = ["a", "b", "c"];
+let ourVariable = ourArray[0]; //a
+console.log(ourVariable);
+// we can also change the value of content inside the array e.g
+ourArray[1] = "Not B";
+console.log(ourArray);
