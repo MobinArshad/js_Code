@@ -159,3 +159,68 @@ for (let i = 0; i < list.length; i++) {
     }
   }
 }
+
+// write a reusable javascript with function
+// declaring a function
+function functionName() {
+  console.log("Hello World");
+}
+
+// calling a function or invoking a function
+functionName();
+
+// passing values to function with Arguments
+
+function testFun(param1, param2) {
+  console.log("My name is " + param1 + " " + param2 + " !");
+}
+testFun("mobin", "Arshad");
+
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(sum(5, 7));
+
+// scope refers to the visibility of variables
+// local variables take precedence over the global variable.
+var someVar = "Hat";
+function myFunc() {
+  var someVar = "Head";
+  console.log(someVar);
+}
+myFunc();
+console.log(someVar);
+// Return value from a function with return
+function plushThree(num3) {
+  return num3 + 3;
+}
+var answer = plushThree(20);
+console.log(answer);
+
+// create a function times five
+function timesFive(num) {
+  return num * 5;
+}
+
+let numFive = timesFive(7);
+console.log(numFive);
+//  add sum
+var sum = 10;
+function addSum(num) {
+  sum += num;
+  return sum;
+}
+console.log(addSum(6));
+// creating sum function in javascript
+
+function sumNum(num1, num2) {
+  return num1 + num2;
+}
+console.log(sumNum(4, 8));
+let processed = 0;
+function processedArgs(num) {
+  return (num + 3) / 5;
+}
+processed = processedArgs(7);
+console.log(processed);
