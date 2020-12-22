@@ -498,3 +498,73 @@ for (let i = 2; i <= 8; i += 2) {
 }
 console.log(arr6);
 console.log(arr7);
+// count backwards with for loops
+let arr8 = [];
+for (let i = 10; i >= 0; i--) {
+  arr8.push(i);
+}
+console.log(arr8);
+// iterate through an array with the for loop
+let arr9 = [10, 9, 8, 7, 6];
+for (let i = 0; i < arr9.length; i++) {
+  console.log(arr9[i]);
+}
+// find the total value of the array
+let total = 0;
+for (let i = 0; i < arr9.length; i++) {
+  total += arr9[i];
+}
+console.log(total);
+// Nesting For Loops
+// Multi-Dimensional arrays
+let arr10 = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+for (let i = 0; i < arr10.length; i++) {
+  for (let j = 0; j < arr10[i].length; j++) {
+    console.log(arr10[i][j]);
+  }
+}
+// Multiplay all items in an array
+
+let arr11 = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+let product = 1;
+for (let i = 0; i < arr11.length; i++) {
+  for (let j = 0; j < arr11[i].length; j++) {
+    product *= arr11[i][j];
+  }
+}
+console.log(product);
+// do while loop
+// it will first do , then spcified the condition to check
+let arr12 = [];
+let k = 0;
+do {
+  arr12.push(k);
+  k++;
+} while (k < 10);
+console.log(arr12);
+// Replace loops using recursion
+// recursion is the function which call again and again itself
+// Multiplying an array with n terms
+function multiply(arr, n) {
+  if (n < 0) {
+    return 1;
+  } else {
+    return arr[n - 1] * multiply(arr, n - 1);
+  }
+}
+// generate random number with javascript
+// Math.random() 0(include)-1(not-include);
+let randomNumber = Math.random();
+console.log(randomNumber);
+// Math.floor();
+// Math.ceil();
+// Math.round();
+// parseInt();
