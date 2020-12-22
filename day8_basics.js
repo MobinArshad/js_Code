@@ -295,3 +295,52 @@ function testSize(num) {
 
 let testSize1 = testSize(6);
 console.log(testSize1);
+
+// switch statements
+let val = 3;
+switch (val) {
+  case 1:
+    console.log("alpha");
+    break;
+  case 2:
+    console.log("beta");
+    break;
+  case 3:
+    console.log("gamma");
+    break;
+  case 4:
+    console.log("delta");
+    break;
+}
+let exp = "M";
+
+switch (exp) {
+  case "a":
+    console.log("apple");
+    break;
+  case "b":
+    console.log("bird");
+    break;
+  case "c":
+    console.log("cat");
+    break;
+  default:
+    console.log("stuff");
+    break;
+}
+
+// Multiple Identical options in Switch Statements
+let result1 = "";
+let val1 = 3;
+switch (val1) {
+  case 1:
+  case 2:
+  case 3:
+    result1 = "1, 2, or 3";
+    break;
+  case 4:
+    result1 = "4 alone";
+    break;
+}
+
+console.log(result1);
