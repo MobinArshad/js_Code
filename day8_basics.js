@@ -344,3 +344,157 @@ switch (val1) {
 }
 
 console.log(result1);
+// Returning boolean values from function
+// either true  values or false values
+// e.g
+
+function isEqual(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEqual(4, 4));
+console.log(isEqual(4, 5));
+
+// better way
+function iequal(a, b) {
+  return a === b;
+}
+
+console.log(iequal(4, 4));
+console.log(iequal(4, 5));
+
+// When a return statements is reached, the execution of the current function stops and control returns to the calling function.
+//e.g
+
+function myFun() {
+  console.log("Hello");
+  return "world";
+  console.log("byebye");
+}
+console.log(myFun());
+// Build JavaScript Objects =============
+// Objects are everything in javascript
+
+const cat = {
+  name: "Whiskers",
+  legs: 4,
+  tails: 1,
+  enemies: ["Water", "Dog"],
+};
+// accesiing javascript objects using dot and bracket notations
+console.log(cat.enemies);
+console.log(cat.enemies[1]);
+
+const myObj = {
+  "space Name": "Kirk",
+  "More Space": "Spock",
+  NoSpace: "USS Enterprise",
+};
+console.log(myObj["space Name"]);
+console.log(myObj["More Space"]);
+console.log(myObj["NoSpace"]);
+// updating object properties
+cat.name = "pushy";
+console.log(cat);
+// add new property to javascript objects
+cat.speak = "Meawo Meawo";
+console.log(cat);
+// delete property from javascript objects
+delete cat.speak;
+console.log(cat);
+// Testing Objects for Properties
+var myObj2 = {
+  top: "hat",
+  bottom: "pants",
+};
+console.log(myObj2);
+let tp = myObj2.hasOwnProperty("top");
+let bt = myObj2.hasOwnProperty("bottom");
+console.log(tp, bt);
+// Manipulating complex objects
+// array of objects
+const ourMusic = [
+  {
+    artist: "Daft Punk",
+    title: "Homework",
+    release_year: 1997,
+    formats: ["CD", "cassette", "LP"],
+    gold: true,
+  },
+];
+
+// Accessing Nested Objects
+const ourStorage = {
+  desk: {
+    drawer: "stapler",
+  },
+  cabinet: {
+    "top drawer": {
+      folder1: "a file",
+      folder2: "secrets",
+    },
+    "bottom drawer": "soda",
+  },
+};
+// access secret
+let sec = ourStorage.cabinet["top drawer"].folder2;
+console.log(sec);
+let stp = ourStorage.desk.drawer;
+console.log(stp);
+// Accessing Nested Arrays
+// Array of objects
+const ourPets = [
+  {
+    animalType: "cat",
+    names: ["Meowzer", "Fluffy", "Kit-Cat"],
+  },
+  {
+    animalType: "dog",
+    names: ["Spot", "Bowser", "Frankie"],
+  },
+];
+// accessing Fluffy
+let fly = ourPets[0].names[1];
+console.log(fly);
+// accessing Spot
+let spt = ourPets[1].names[0];
+console.log(spt);
+// Iterate with javascript While Loops
+// while loop
+let arr3 = [];
+let i = 0;
+while (i <= 5) {
+  arr3.push(i);
+  i++;
+}
+console.log(arr3);
+// storing values from 5 to 0
+let arr4 = [];
+let num4 = 5;
+while (num4 >= 0) {
+  arr4.push(num4);
+  num4--;
+}
+console.log(arr4);
+// for loop in javascript
+let arr5 = [];
+for (let i = 0; i <= 5; i++) {
+  arr5.push(i);
+}
+console.log(arr5);
+// Adding odd numbers in array from 1 to 9 using for loop
+let arr6 = [];
+for (let i = 1; i <= 9; i += 2) {
+  arr6.push(i);
+}
+// adding even numbers from 2 to 8
+let arr7 = [];
+for (let i = 2; i <= 8; i += 2) {
+  arr7.push(i);
+}
+console.log(arr6);
+console.log(arr7);
