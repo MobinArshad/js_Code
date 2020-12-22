@@ -224,3 +224,74 @@ function processedArgs(num) {
 }
 processed = processedArgs(7);
 console.log(processed);
+// understanding boolean values
+// another data types in javaScript
+// Boolean values either true value or false values
+
+function welcomeToBooleans() {
+  return true;
+}
+console.log(welcomeToBooleans());
+// all conditional statements used boolean values to check the result either true values or valse values
+// if, else if, else, switch ,ternary operator...
+
+//Use Conditional Logic with If Statements
+// if(conditio is true){
+//   statement is executed
+// }
+function test(myCondition) {
+  if (myCondition) {
+    return "It is true";
+  }
+
+  return "It is false";
+}
+
+let checkText1 = test(true);
+console.log(checkText1);
+
+let checkText2 = test(false);
+console.log(checkText2);
+// comparision with equality operator
+// == equality operator
+// === strict equality operator
+
+function equalityTest(myVal) {
+  if (myVal == 10) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+console.log(equalityTest(10));
+// type coersion "Convert one data into another" in case of equality operator not strict equality operator
+
+console.log(3 === 3);
+console.log(3 === "3");
+console.log(3 == "3");
+
+console.log(typeof 3);
+console.log(typeof "3");
+console.log(typeof true);
+
+// inequality operator !=
+// strict inequality operator !==
+// Comparision Operator
+
+function testSize(num) {
+  let output = "";
+  if (num < 5) {
+    output = "Tiny";
+  } else if (num < 10) {
+    output = "Small";
+  } else if (num < 15) {
+    output = "Medium";
+  } else if (num < 20) {
+    output = "Large";
+  } else {
+    output = "Huge";
+  }
+  return output;
+}
+
+let testSize1 = testSize(6);
+console.log(testSize1);
