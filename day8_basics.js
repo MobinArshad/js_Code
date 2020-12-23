@@ -568,3 +568,15 @@ console.log(randomNumber);
 // Math.ceil();
 // Math.round();
 // parseInt();
+
+// Ternary operator
+// condition ? expression-if-true : expression-if-false
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater";
+}
+console.log(findGreater(3, 5));
+// check number is positive negative or zero using ternary operator
+function checkNumber(num) {
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+console.log(checkNumber(-4));
