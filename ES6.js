@@ -92,3 +92,70 @@ function freezeObj() {
 
 const PI1 = freezeObj();
 console.log(PI1);
+// Arrow function in javascript
+let myFunc = function () {
+  let name = "Mobin Arshad Khan";
+  return name;
+};
+
+myFunc = () => {
+  let name = "Mobin Arshad Khan";
+  return name;
+};
+
+myFunc = () => "Mobin Arshad Khan";
+
+console.log(myFunc());
+const magic = () => new Date();
+
+// write arrow function with parameters
+// single parameters without paranthesis
+const doubler = (item) => item * 2;
+console.log(doubler(2));
+const tripler = (x) => x * 3;
+
+// two or more than two with parenthesis
+const mult = (num1, num2) => num1 * num2;
+console.log(mult(5, 6));
+
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2, 3, 4, 5], [6, 7, 8, 9]));
+
+//Set Default Parameters for Your FunctionsPassed
+const greeting = (userName = "Geeker") =>
+  "Welcome to this chanel Mr. " + userName + " !";
+console.log(greeting());
+console.log(greeting("Mobin Arshad Khan"));
+
+//Use the Rest Parameter with Function Parameters
+function howMany(...args) {
+  return args;
+}
+
+console.log(howMany(1, 2, 3, 4, 5));
+
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b);
+};
+
+console.log(sum(3, 5, 6, 8));
+// Use the Spread Operator to Evaluate Arrays In-PlacePassed
+
+// in ES 5
+
+var arr = [6, 89, 3, 45];
+var maximum = Math.max.apply(null, arr);
+console.log(maximum);
+console.log(Math.max(5, 8, 930, 388));
+console.log(Math.max(...arr));
+
+// copy all contents of arr1 into another array arr2 using spread operator
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arr2;
+arr2 = [...arr1];
+console.log(arr2);
+// copying array items using slice
+// slice is generally used to cut into parts
+let arr3 = arr1.slice(0);
+console.log(arr3);
