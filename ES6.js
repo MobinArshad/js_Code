@@ -60,3 +60,35 @@ s[0] = 1;
 s[1] = 2;
 s[2] = 3;
 console.log(s);
+// prevent object mutation
+// Syntax Object.freeze(nameOfObject)
+const mobin = {
+  name: "Mobin Arshad Khan",
+  profession: "Software Engineer",
+  education: "Bachelor of Engineering",
+  hobbies: "Travelling",
+  age: 23,
+};
+console.log(mobin);
+Object.freeze(mobin); // it prevent the mutation of Objects
+mobin.color = "brown";
+console.log(mobin);
+delete mobin.name;
+console.log(mobin);
+// freeze the objects
+
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+  Object.freeze(MATH_CONSTANTS);
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (err) {
+    console.log(err);
+  }
+  return MATH_CONSTANTS.PI;
+}
+
+const PI1 = freezeObj();
+console.log(PI1);
