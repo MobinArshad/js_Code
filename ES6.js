@@ -159,3 +159,79 @@ console.log(arr2);
 // slice is generally used to cut into parts
 let arr3 = arr1.slice(0);
 console.log(arr3);
+// object destrucutring
+let user2 = {
+  name: "Mobin Arshad Khan",
+  age: 23,
+  address: "Village Rahmat Nagar",
+  isMarried: false,
+  color: "fair",
+};
+// Accessing objects by dot notation
+console.log(user2);
+console.log(user2.name);
+console.log(user2.age);
+console.log(user2.address);
+console.log(user2.isMarried);
+console.log(user2.color);
+// Accessing objects by destructuring
+const { name, age, address, color, isMarried } = user2;
+console.log(name, age, address, color, isMarried);
+
+const john = {
+  name2: "John Doe",
+  age2: 34,
+};
+// accessing objects by dot or destructuring
+console.log(john.name2, john.age2);
+var { name2, age2 } = john;
+console.log(name2, age2);
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80,
+};
+
+const { today, tomorrow } = HIGH_TEMPERATURES;
+console.log(today, tomorrow);
+//Use Destructuring Assignment to Assign Variables from ObjectsPassed
+
+const userName = {
+  name3: "john Doe",
+  age3: 34,
+};
+const { name3: userFullName, age3: userAge } = userName;
+console.log(userFullName, userAge);
+
+// Use Destructuring Assignment to Assign Variables from Nested ObjectsPassed
+
+const user4 = {
+  johnDoe: {
+    age4: 34,
+    email: "johnDoe@freeCodeCamp.com",
+  },
+};
+
+const {
+  johnDoe: { age4: jhonDoeAge, email: jhonDoeEmail },
+} = user4;
+console.log(jhonDoeEmail);
+console.log(jhonDoeAge);
+
+//Use Destructuring Assignment to Assign Variables from ArraysPassed
+
+const [a, , b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); // 1, 3
+
+//Use Destructuring Assignment with the Rest Parameter to Reassign Array ElementsPassed
+let num5 = [1, 2, 3, 4, 5, 6];
+
+const [z, y, ...arr10] = num5;
+console.log(arr10); // [3, 4, 5, 6]
+// Use Destructuring Assignment to Pass an Object as a Function's ParametersPassed
+
+const profileUpdate = (profileData) => {
+  const { abc, acd, lto } = profileData;
+  // do something with these data
+};
