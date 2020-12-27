@@ -235,3 +235,89 @@ const profileUpdate = (profileData) => {
   const { abc, acd, lto } = profileData;
   // do something with these data
 };
+// creating String using template literals `backticks`
+
+const fullName = "Mobin Arshad Khan";
+const mobinAge = 23;
+const mobinEdu = "Bachelor of Engineering";
+const mobinProfession = "Software Engineer";
+
+const bio = `I am ${fullName}, a ${mobinAge} years old ${mobinProfession}having degree ${mobinEdu}`;
+console.log(bio);
+// Write Concise Object Literal Declarations Using Object Property ShorthandPassed
+
+//const getMousePosition = (x, y) => ({
+// x: x,
+// y: y,
+//});
+
+const getMousePosition = (x, y) => ({ x, y });
+// ES 5 syntax of Method
+const person = {
+  personName: "Mobin Arshad",
+  sayHello: function () {
+    return `Hello! My name is ${this.personName}`;
+  },
+};
+
+// ES 6 syntax of Method
+
+const friendName = {
+  friendName: "Mohit",
+  sayHello() {
+    return `Hello! My name is ${this.friendName}`;
+  },
+};
+
+// calling methods are same in both
+console.log(person.sayHello());
+console.log(friendName.sayHello());
+
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  },
+};
+bicycle.setGear(6);
+console.log(bicycle.gear);
+// use class syntax to define a constructor function
+
+// ES 5
+function SpaceShuttle(targetPlants) {
+  this.targetPlants = targetPlants;
+}
+const zeus = new SpaceShuttle("Jupitor");
+console.log(zeus.targetPlants);
+
+// ES 6
+class Name {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+}
+
+const Mobin = new Name("Mobin Arshad", "Khan", 23);
+console.log(Mobin.firstName);
+console.log(Mobin.lastName);
+console.log(Mobin.age);
+// Use getters and setters to control Access to an Object
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+  // getter
+  get writer() {
+    return this._author;
+  }
+  // setter
+  set writer(updateAuthor) {
+    this._author = updateAuthor;
+  }
+}
+const novel = new Book("Anonymous");
+console.log(novel.writer);
+novel.writer = "newAuthor";
+console.log(novel.writer);
