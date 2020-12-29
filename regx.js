@@ -51,3 +51,16 @@ str = "Twinkle, twinkle, little star";
 regex = /twinkle/gi;
 x = str.match(regex);
 console.log(x);
+// Match Anything with wildcard Period (.)
+// wild card also called dot or period
+
+str = "I'll hum a song";
+str2 = "Bear hug";
+regex = /hu./;
+console.log(regex.test(str));
+console.log(regex.test(str2));
+
+str = "Let's have fun with regular expressions!";
+regex = /.un/;
+x = regex.test(str);
+console.log("Wild Card  : " + x);
