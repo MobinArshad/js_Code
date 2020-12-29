@@ -321,3 +321,37 @@ const novel = new Book("Anonymous");
 console.log(novel.writer);
 novel.writer = "newAuthor";
 console.log(novel.writer);
+
+// create a Module Script
+{
+  /* <script type = "module" src = "filename.js"></script> */
+}
+
+//Use export to Share a Code BlockPassed
+
+export const add = (x, y) => {
+  return x + y;
+};
+
+const subtract = (x, y) => {
+  return x - y;
+};
+
+export { subtract };
+
+// export {subtract, add}
+
+//Reuse JavaScript Code Using importPassed
+// import {add} from "./math_function.js";
+//  import {add, subtract} from './math_function.js';
+//Use * to Import Everything from a File
+
+// create a javascript Promise
+const myPromise = new Promise((resolve, reject) => {
+  // do with code
+  if (true) {
+    resolve("promise fullfilled");
+  } else {
+    reject("Promise rejected");
+  }
+});
