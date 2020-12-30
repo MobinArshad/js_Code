@@ -107,3 +107,56 @@ console.log(quoteSample.match(rgx));
 let difficultSpelling = "Mississippi";
 let rgx1 = /s+/gi;
 console.log(difficultSpelling.match(rgx1));
+
+//Match Characters that Occur Zero or More TimesPassed => *
+let soccerWord = "goooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+
+console.log(soccerWord.match(goRegex));
+console.log(gPhrase.match(goRegex));
+console.log(oPhrase.match(goRegex));
+
+//Find Characters with Lazy Matching
+
+//Fix the regex /<.*>/ to return the HTML tag <h1> and not the text "<h1>Winter is coming</h1>". Remember the wildcard . in a regular expression matches any character.
+
+let text = "<h1>Winter is coming</h1>";
+let rgX2 = /<.*?>/;
+console.log(text.match(rgX2));
+//Match Beginning String Patterns
+
+let firstString = "Ricky is first and can be found.";
+let firstRegex = /^Ricky/;
+console.log(firstRegex.test(firstString));
+let notFirst = "You cant'n find Ricky now.";
+console.log(firstRegex.test(notFirst));
+// Match Ending String Patterns $
+
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+console.log(storyRegex.test(theEnding));
+//
+let noEnding = "Sometimes a story will have to end";
+console.log(storyRegex.test(noEnding));
+//Match All Letters and NumbersPassed
+
+// alphabet \w ===== [A-Za-z0-9_]
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+
+//Match Everything But Letters and NumbersPassed
+// /[^A-Za-z0-9_]/ ===== \W
+
+// Match all Numbers
+// [0-9] ==== \d
+
+// Match all Non-Numbers
+// [^0-9] ==== \D
+
+// Match white space (space b/w letters)
+// \s
+
+// Match Non-Whitespace Characters
+// \S
