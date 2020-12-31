@@ -110,3 +110,124 @@ function greaterThanTen(arr) {
 
 let greaterTenCon = greaterThanTen([2, 12, 8, 14, 80, 0, 1]);
 console.log(greaterTenCon);
+
+//We have defined a function, filteredArray, which takes arr, a nested array, and elem as arguments, and returns a new array. elem represents an element that may or may not be present on one or more of the arrays nested within arr. Modify the function, using a for loop, to return a filtered version of the passed array such that any array nested within arr containing elem has been removed.
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) === -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+let argArray = [
+  [3, 2, 3],
+  [1, 6, 3],
+  [3, 13, 26],
+  [19, 3, 9],
+];
+console.log(filteredArray(argArray, 3));
+
+// Multi- Dimensional Arrays
+
+let nestedArray = [
+  ["deep"],
+  [["deeper"], ["deeper"]],
+  [[["deepest"], ["deepest"]]],
+  [[["deepest-est?"]]],
+];
+console.log(nestedArray);
+
+// Add Key Value Pairs to JavaScript Objects
+const tekkenCharacter = {
+  player: "Hwoarang",
+  fightingStyle: "Tae Know Doe",
+  human: true,
+};
+
+// adding addtional property to objects
+tekkenCharacter.origin = "South Korea";
+tekkenCharacter["hair color"] = "dyed orange";
+
+const eyes = "eye color";
+tekkenCharacter[eyes] = "brown";
+console.log(tekkenCharacter);
+// Modify an Object Nested Within an Object
+let nestedObject = {
+  id: 2880269164,
+  date: "December 31, 2020",
+  data: {
+    totalUsers: 99,
+    online: 80,
+    onlinStatus: {
+      active: 67,
+      away: 13,
+      busy: 8,
+    },
+  },
+};
+
+// assign busy to 10
+let newBusy = (nestedObject.data.onlinStatus.busy = 10);
+console.log(nestedObject);
+
+// Use the delete keyword to Remove Object Properties
+
+const mobin = {
+  name: "Mobin Arshad Khan",
+  age: 23,
+  hobbies: ["Making Apps", "Travellings"],
+  job: "Software Engineer",
+  hate: "Memorizing things",
+};
+
+delete mobin.hate;
+console.log(mobin);
+
+// check if an Object has a Property
+
+console.log(mobin.hasOwnProperty("name"));
+console.log(mobin.hasOwnProperty("dob"));
+console.log(mobin.hasOwnProperty("hobbies"));
+//We've created an object, users, with some users in it and a function isEveryoneHere, which we pass the users object to as an argument. Finish writing this function so that it returns true only if the users object contains all four names, Alan, Jeff, Sarah, and Ryan, as keys, and false otherwise.
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true,
+  },
+  Jeff: {
+    age: 32,
+    online: true,
+  },
+  Sarah: {
+    age: 48,
+    online: true,
+  },
+  Ryan: {
+    age: 19,
+    online: true,
+  },
+};
+
+function isEveryoneHere(obj) {
+  ["Alan", "Jeff", "Sarah", "Ryan"].every((name) => obj.hasOwnProperty(name));
+}
+
+console.log(isEveryoneHere(users));
+
+// Iterate through the Keys of an Object with a for...in Statement
+const user = {
+  name: "Mobin Arshad Khan",
+  age: 23,
+  love: "unknown",
+  education: "Bachelor of Engineering",
+  profession: "Software Engineering",
+};
+
+for (let prop in user) {
+  console.log(prop + " " + user[prop]);
+}
